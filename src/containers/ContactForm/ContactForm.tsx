@@ -13,11 +13,15 @@ const formKeys = {
 };
 
 const ContactForm: React.FC = () => {
-	const register = () => {
-		console.log(values);
+	const submitCallback = () => {
+		console.log("onSubmit cb: ", values);
 	};
 
-	const [values, handleChange, handleSubmit] = useForm(register);
+	const [values, handleChange, handleSubmit] = useForm(submitCallback);
+
+	React.useEffect(() => {
+		console.log("useEffect(): ", values);
+	}, [values]);
 
 	return (
 		<BlockContainer>
