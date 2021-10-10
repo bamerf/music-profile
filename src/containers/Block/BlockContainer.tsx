@@ -1,9 +1,21 @@
 import * as React from "react";
+import cn from "clsx";
 
 import styles from "./blockContainer.module.scss";
 
-export const BlockContainer: React.FC = ({ children }) => (
-	<section className={`flex justify-center items-center ${styles.root}`}>
+interface ComponentProps {
+	small?: boolean;
+}
+
+export const BlockContainer: React.FC<ComponentProps> = ({
+	children,
+	small,
+}) => (
+	<section
+		className={`flex justify-center items-center ${styles.root} ${cn({
+			[styles.small]: small,
+		})}`}
+	>
 		{children}
 	</section>
 );

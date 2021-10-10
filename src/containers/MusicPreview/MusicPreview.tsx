@@ -16,6 +16,7 @@ export const MusicPreview: React.FC<ComponentProps> = ({ urls }) => (
 						key={index}
 						url={url}
 						height="160px"
+						className="mb-6"
 						// config={{ soundcloud: { options: { color: "#0066CC" } } }}
 					/>
 				))}

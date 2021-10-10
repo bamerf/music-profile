@@ -13,7 +13,7 @@ interface ComponentProps {
 
 export const NavBar: React.FC<ComponentProps> = ({ paths }) => (
 	<div className={`flex justify-center align-middle py-5 ${styles.root}`}>
-		<h1>zarb</h1>
+		<h1 className={styles.logo}>zarb</h1>
 		{paths &&
 			paths.map((path) => (
 				<Link href={path === Paths.Home ? "/" : `/${path}`}>

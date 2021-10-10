@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 
-interface ComponentProps {
-	handleSubmit: any;
-}
+type HandleChangeEvent = React.ChangeEvent<
+	HTMLTextAreaElement | HTMLInputElement
+>;
 
-export const useForm: React.FC<ComponentProps> = (submitCallback) => {
+type TUseForm = [
+	{ [key: string]: any },
+	(e: HandleChangeEvent) => void,
+	(e: React.SyntheticEvent) => void
+];
+
+export const useForm = (submitCallback: () => void): TUseForm => {
 	const [state, setState] = useState({});
 
-	const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
+	const handleSubmit = (event: React.SyntheticEvent) => {
 		event.preventDefault();
 		submitCallback();
 	};
 
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+	const handleChange = (event: HandleChangeEvent) => {
 		event.persist();
 		// console.log(event.target.value);
 		console.log(event.target.name);

@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
 	return (
 		<ContentContainer>
-			<BlockContainer />
+			<BlockContainer small />
 			<MusicPreview urls={urls} />
 			<ProfileContainer />
 			<ContactForm />
