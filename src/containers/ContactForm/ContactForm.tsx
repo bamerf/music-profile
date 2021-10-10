@@ -1,22 +1,18 @@
 import * as React from "react";
-import cn from "clsx";
 
 import styles from "./contactForm.module.scss";
 
-import PayButton from "src/components/PayButton";
-import PayInput from "src/components/PayInput/PayInput";
-import PayTextArea from "src/components/PayTextArea/PayTextArea";
-import { BlockContainer } from "../Block/BlockContainer";
-import { useForm } from "src/hooks/useForm";
+import { PayButton, PayInput, PayTextArea } from "src/components";
 
-interface ComponentProps {}
+import { BlockContainer } from "src/containers";
+import { useForm } from "src/hooks/useForm";
 
 const formKeys = {
 	email: "email",
 	message: "message",
 };
 
-export const ContactForm: React.FC<ComponentProps> = () => {
+const ContactForm: React.FC = () => {
 	const register = () => {
 		console.log(values);
 	};
@@ -51,3 +47,5 @@ export const ContactForm: React.FC<ComponentProps> = () => {
 		</BlockContainer>
 	);
 };
+
+export default ContactForm;

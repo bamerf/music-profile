@@ -1,9 +1,11 @@
 import * as React from "react";
-import { NavBar } from "src/containers/NavBar/NavBar";
+import { NavBar } from "src/containers";
 
-export const HeaderContainer: React.FC = ({ children }) => (
+const HeaderContainer: React.FC = ({ children }) => (
 	<header className="bg-black">
 		<NavBar />
 		{children}
 	</header>
 );
+
+export default HeaderContainer;

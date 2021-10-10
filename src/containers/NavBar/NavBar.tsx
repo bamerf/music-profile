@@ -11,7 +11,7 @@ interface ComponentProps {
 	paths?: Paths[];
 }
 
-export const NavBar: React.FC<ComponentProps> = ({ paths }) => (
+const NavBar: React.FC<ComponentProps> = ({ paths }) => (
 	<div className={`flex justify-center align-middle py-5 ${styles.root}`}>
 		<h1 className={styles.logo}>zarb</h1>
 		{paths &&
@@ -22,3 +22,5 @@ export const NavBar: React.FC<ComponentProps> = ({ paths }) => (
 			))}
 	</div>
 );
+
+export default NavBar;

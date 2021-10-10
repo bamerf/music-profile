@@ -4,7 +4,7 @@ import Head from "next/head";
 import "src/styles/main.scss";
 import type { AppProps } from "next/app";
 
-import { MainLayout } from "src/containers/Main/MainLayout";
+import { MainLayout } from "src/containers";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (

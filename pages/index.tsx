@@ -1,12 +1,13 @@
 import * as React from "react";
 import type { NextPage } from "next";
 
-import { ContentContainer } from "src/containers/Content/ContentContainer";
-import { CardContainer } from "src/containers/Card/CardContainer";
-import { ContactForm } from "src/containers/ContactForm/ContactForm";
-import { MusicPreview } from "src/containers/MusicPreview/MusicPreview";
-import { BlockContainer } from "src/containers/Block/BlockContainer";
-import { ProfileContainer } from "src/containers/Profile/ProfileContainer";
+import {
+	ContentContainer,
+	ContactForm,
+	MusicPreview,
+	BlockContainer,
+	ProfileContainer,
+} from "src/containers";
 
 const Home: NextPage = () => {
 	const URLS = [

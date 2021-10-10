@@ -4,11 +4,11 @@ import profilePic from "../../../public/img/profile/profile-pic-bam-filtered.png
 import { RiSoundcloudLine } from "react-icons/ri";
 import { FiInstagram } from "react-icons/fi";
 
-import { BlockContainer } from "../Block/BlockContainer";
+import { BlockContainer } from "src/containers";
 
 import styles from "./profileContainer.module.scss";
 
-export const ProfileContainer: React.FC = () => (
+const ProfileContainer: React.FC = () => (
 	<BlockContainer>
 		<div className={styles.root}>
 			<Image
@@ -46,7 +46,8 @@ export const ProfileContainer: React.FC = () => (
 					</a>
 				</div>
 			</h1>
-			<div></div>
 		</div>
 	</BlockContainer>
 );
+
+export default ProfileContainer;

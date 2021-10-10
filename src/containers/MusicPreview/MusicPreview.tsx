@@ -1,13 +1,11 @@
 import * as React from "react";
 import ReactPlayer from "react-player";
-import { BlockContainer } from "../Block/BlockContainer";
-
-import styles from "./musicPreview.module.scss";
+import { BlockContainer } from "src/containers";
 
 interface ComponentProps {
 	urls: string[];
 }
-export const MusicPreview: React.FC<ComponentProps> = ({ urls }) => (
+const MusicPreview: React.FC<ComponentProps> = ({ urls }) => (
 	<BlockContainer>
 		<div className="flex-col justify-center items-center gap-6">
 			{urls &&
@@ -23,3 +21,5 @@ export const MusicPreview: React.FC<ComponentProps> = ({ urls }) => (
 		</div>
 	</BlockContainer>
 );
+
+export default MusicPreview;

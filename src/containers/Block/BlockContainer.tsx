@@ -7,10 +7,7 @@ interface ComponentProps {
 	small?: boolean;
 }
 
-export const BlockContainer: React.FC<ComponentProps> = ({
-	children,
-	small,
-}) => (
+const BlockContainer: React.FC<ComponentProps> = ({ children, small }) => (
 	<section
 		className={`flex justify-center items-center ${styles.root} ${cn({
 			[styles.small]: small,
@@ -19,3 +16,5 @@ export const BlockContainer: React.FC<ComponentProps> = ({
 		{children}
 	</section>
 );
+
+export default BlockContainer;
