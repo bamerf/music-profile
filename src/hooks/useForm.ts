@@ -4,13 +4,13 @@ type HandleChangeEvent = React.ChangeEvent<
 	HTMLTextAreaElement | HTMLInputElement
 >;
 
-type TUseForm = [
+type UseFormType = [
 	{ [key: string]: any },
 	(e: HandleChangeEvent) => void,
 	(e: React.SyntheticEvent) => void
 ];
 
-export const useForm = (submitCallback: () => void): TUseForm => {
+export const useForm = (submitCallback: () => void): UseFormType => {
 	const [state, setState] = useState({});
 
 	const handleSubmit = (event: React.SyntheticEvent) => {
