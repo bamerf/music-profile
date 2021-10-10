@@ -1,0 +1,173 @@
+@use "../../styles/variables";
+
+$borderRadius: variables.$inputBorderRadius;
+
+.border {
+	position: absolute;
+	border: 1px solid variables.$grey220;
+	border-radius: $borderRadius;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+
+.info {
+	color: variables.$grey220;
+	font-size: 12px;
+}
+
+.error {
+	color: variables.$error;
+	font-size: 12px;
+
+	.border {
+		border: 1px solid variables.$error;
+	}
+
+	.textarea {
+		&:focus {
+			~ .border {
+				/* stylelint-disable-next-line */
+				box-shadow: 0 0 0 4px rgba(variables.$error, 0.2) !important;
+			}
+		}
+		&:hover {
+			~ .border {
+				/* stylelint-disable-next-line */
+				border-color: variables.$error !important;
+			}
+		}
+	}
+}
+
+.root {
+	label {
+		color: variables.$grey220;
+		font-family: variables.$fontFamily;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+		text-align: left;
+	}
+
+	.textarea {
+		display: block;
+		color: variables.$white;
+		border: none;
+		outline: none;
+		background-color: black;
+		border-radius: $borderRadius;
+		min-height: 40px;
+		padding: 10px 15px;
+		font-size: 14px;
+		font-family: variables.$fontFamily;
+		line-height: 20px;
+		font-weight: 400;
+
+		&:focus {
+			~ .border {
+				border-color: variables.$inputHoverBorderColor;
+				box-shadow: variables.$inputFocusBackground;
+				outline: 0;
+			}
+		}
+		// Reset
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus,
+		&:-webkit-autofill:active {
+			/* stylelint-disable-next-line */
+			-webkit-box-shadow: 0 0 0 30px variables.$white inset !important;
+
+			/* stylelint-disable-next-line */
+			-webkit-text-fill-color: variables.$grey900 !important;
+		}
+
+		// Remove spinner icons
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button,
+		&::-webkit-calendar-picker-indicator {
+			-webkit-appearance: none;
+			background-image: none;
+			margin: 0;
+		}
+
+		-moz-appearance: textfield;
+
+		&:disabled {
+			background-color: variables.$grey100;
+			~ .border {
+				border: none;
+				pointer-events: auto;
+				cursor: not-allowed;
+			}
+		}
+
+		&:hover {
+			&:not(:focus) {
+				cursor: pointer;
+			}
+			&:disabled {
+				cursor: not-allowed;
+			}
+
+			~ .border {
+				// border-color: variables.$inputHoverBorderColor;
+				border: 2px solid variables.$inputHoverBorderColor;
+			}
+		}
+	}
+}
+
+.textareaContainer {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.textarea {
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	min-width: 0;
+
+	&::placeholder {
+		font-family: variables.$fontFamily;
+		color: variables.$grey500;
+	}
+}
+
+.label {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	font-family: variables.$fontFamily;
+	text-align: left;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 1.21px;
+	padding: 0.5rem 0;
+	.action {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		color: variables.$grey500;
+	}
+}
+
+.optional {
+	color: variables.$radicalRed;
+
+	&::before {
+		content: " | ";
+		color: variables.$grey220;
+	}
+}

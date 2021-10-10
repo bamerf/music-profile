@@ -1,0 +1,25 @@
+@use "../../styles/variables";
+
+.root {
+	display: flex;
+	gap: 64px;
+	padding: 0 64px;
+	justify-content: space-between;
+}
+
+.image {
+	filter: grayscale(10%);
+}
+
+.text {
+	max-width: 50%;
+	align-self: self-end;
+	padding-bottom: 36px;
+
+	color: white;
+	font-family: variables.$fontFamily;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 1.21px;
+}

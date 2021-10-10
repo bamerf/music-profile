@@ -1,0 +1,47 @@
+@use "src/styles/variables";
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: 0;
+  padding: 0 20px 5px;
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--grey-color-900, #{variables.$grey900});
+  cursor: pointer;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.title {
+  font-family: var(--font-family, #{variables.$fontFamily});
+  color: variables.$grey900;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 1.4px;
+}
+
+.content {
+  margin-top: 20px;
+  font-family: var(--font-family, #{variables.$fontFamily});
+
+  @media (min-width: 640px) {
+    padding: 0 20px;
+  }
+}
+
+.icon {
+  transform: rotate(90deg);
+  transition-duration: 200ms;
+}
+
+.iconReversed {
+  transform: rotate(-90deg);
+  transition-duration: 200ms;
+}

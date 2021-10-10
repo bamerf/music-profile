@@ -1,0 +1,5 @@
+PaySpinner Component
+
+```jsx
+<PaySpinner />
+```

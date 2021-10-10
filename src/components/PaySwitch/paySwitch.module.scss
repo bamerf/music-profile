@@ -1,0 +1,93 @@
+@use "src/styles/variables";
+
+.disabled {
+  color: var(--grey-color-500, #{variables.$grey500});
+  cursor: not-allowed;
+}
+
+.root {
+  display: inline-block;
+
+  label {
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    margin: 3px;
+
+    &:not(.disabled) {
+      cursor: pointer;
+    }
+  }
+
+  input[type="checkbox"] {
+    --active: var(--primary-color, #{variables.$primary300});
+    --active-inner: var(--text-inverse-color, #{variables.$primary300});
+    --border: var(--grey-color-500, #{variables.$grey300});
+    --border-hover: var(--primary-color, #{variables.$primary300});
+    --background: var(--background-color, #{variables.$white});
+    --disabled: #f6f8ff;
+    --disabled-inner: #e1e6f9;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    width: 38px;
+    border-radius: 11px;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    margin: 0 3px 0 0;
+    cursor: pointer;
+    border: 2px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+      left: 2px;
+      top: 2px;
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      background: var(--ab, var(--border));
+      transform: translateX(var(--x, 0));
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+
+    &:checked {
+      --r: 43deg;
+      --bc: var(--active);
+      --d-o: 0.3s;
+      --d-t: 0.6s;
+      --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+      --ab: var(--active-inner);
+      --x: 17px;
+    }
+
+    &:disabled {
+      --b: var(--disabled);
+
+      cursor: not-allowed;
+      opacity: 0.9;
+
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+
+      &:not(:checked)::after {
+        opacity: 0.6;
+      }
+    }
+
+    &:hover:not(:checked):not(:disabled) {
+      --bc: var(--border-hover);
+    }
+  }
+}

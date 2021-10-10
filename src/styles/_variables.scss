@@ -1,0 +1,112 @@
+@import url("https://use.typekit.net/lmf8oyn.css");
+
+// Fonts
+$fontFamily: "CircularStd", "Open Sans", arial, sans-serif !default;
+$fontRewards: "europa", sans-serif !default;
+$fontPayLight: "PayLight", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$fontPayMedium: "PayMedium", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$fontPayHeavy: "PayHeavy", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+
+// Brand colours
+$trustBlue: #1e236e !default;
+$violetEggplant: #941f81 !default;
+$radicalRed: #ff2868 !default; // not from our app
+$springGreen: #00e686 !default; // not from our app
+
+// UI/UX Colours
+// find pay variables from our UX/UI designs
+$jacksonsPurple: #262b8c !default; // not from our app
+$royalBlue: #3138b4 !default; // not from our app
+$dodgerBlue: #40a9ff !default;
+$evergladeGreen: #1d3f31 !default;
+$sherwoodGreen: #006a3e !default;
+$icebergGreen: #e5f7f0 !default;
+$jadeGreen: #00b368 !default;
+$mildGreen: #21a179 !default;
+$jungleGreen: #28bd8a !default;
+$vistaBlue: #77d1a4 !default;
+$hawaiianTan: #9d5614 !default;
+$fuelYellow: #f0a92e !default;
+$albescentWhite: #fff4e5 !default;
+$brightRed: #a70000 !default;
+$wispPink: #fce6e6 !default;
+$pastelRed: #d03443 !default;
+$carnation: #f25468 !default;
+$jellyBean: #276ba6 !default;
+$pickledBluewood: #283e48 !default;
+$laPalma: #429e15 !default;
+$soundcloudOrange: hsl(10, 99%, 49%) !default;
+
+// System colours
+$error: #c22538 !default;
+$warning: #f7b500 !default;
+$success: #52c41a !default;
+$info: #0067c5 !default; // not from our app
+
+// Shades
+// Grey
+$grey900: #212932 !default;
+$grey800: #3a3b39 !default;
+$grey750: #484848 !default;
+$grey730: #4d4d4d !default;
+$grey700: #4f4f4f !default;
+$grey600: #595959 !default;
+$grey500: #6d6d6d !default;
+$grey420: #707070 !default;
+$grey400: #717171 !default;
+$grey300: #979797 !default;
+$grey280: #a9a9a9 !default;
+$grey240: #b6b6b6 !default;
+$grey220: #c9c9c9 !default;
+$grey200: #d9d9d9 !default;
+$grey100: #e0e0e0 !default;
+$grey50: #fafafa !default;
+$grey30: #fbfbfb !default;
+
+// Primary
+$primary900: #00375f !default;
+$primary800: #0a3161 !default;
+$primary700: #2b3d7d !default;
+$primary600: #2d4d99 !default;
+$primary500: #3063c1 !default;
+$primary400: #0063a2 !default;
+$primary300: #0074bf !default;
+$primary200: #1890ff !default;
+$primary100: #66b5ff !default;
+$primary50: #b3daff !default;
+
+// Utility colours
+$highlight: $primary200 !default;
+$white: #fff !default;
+//$border: $grey100 !default;
+
+// Utility shadows
+$shadowSm: 0 2px 2px rgba(0, 0, 0, 0.04), 0 3px 1px rgba(0, 0, 0, 0.04),
+	0 1px 5px rgba(0, 0, 0, 0.08) !default;
+$shadowMd: 0 4px 5px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.08),
+	0 2px 4px rgba(0, 0, 0, 0.14) !default;
+$shadowLg: 0 12px 17px rgba(0, 0, 0, 0.06), 0 5px 22px rgba(0, 0, 0, 0.06),
+	0 7px 8px rgba(0, 0, 0, 0.08) !default;
+$shadowXl: 0 24px 38px rgba(0, 0, 0, 0.08), 0 9px 46px rgba(0, 0, 0, 0.08),
+	0 11px 15px rgba(0, 0, 0, 0.14) !default;
+
+// Gradients
+$hero-gradient: linear-gradient(222deg, #3068cb 0%, #2b3d7d 100%);
+$dark-gradient: linear-gradient(268deg, #002140 1%, #1b3666 100%);
+$light-grey-bg: linear-gradient(
+	204.96deg,
+	#f2f4ff 0%,
+	rgba(242, 244, 255, 0.45) 100%
+);
+$second-light-grey-bg: linear-gradient(
+	198.6deg,
+	rgba(234, 237, 250, 0.63) 0%,
+	#e3e8ff 100%
+);
+
+// Inputs
+$inputElementsBackground: $grey50;
+$inputBorderColor: $grey220; // rgba(0,0,0,0.24);
+$inputBorderRadius: 3px;
+$inputFocusBackground: 0 0 5px 2px rgb(242, 244, 255, 0.45);
+$inputHoverBorderColor: $soundcloudOrange;

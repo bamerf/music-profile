@@ -1,0 +1,224 @@
+@use "../../styles/variables";
+
+.border {
+	position: absolute;
+	border: 1px solid variables.$grey240;
+	border-radius: variables.$inputBorderRadius;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+
+.info {
+	font-family: variables.$fontPayLight;
+	color: variables.$grey300;
+	font-size: 0.875rem;
+	line-height: 2;
+}
+
+.error {
+	color: variables.$error;
+	font-size: 12px;
+
+	.border {
+		border: 1px solid variables.$error;
+	}
+
+	.input {
+		&:focus {
+			~ .border {
+				box-shadow: 0 0 0 4px rgba(variables.$error, 0.2) !important;
+			}
+		}
+		&:hover {
+			~ .border {
+				border-color: variables.$error !important;
+			}
+		}
+	}
+}
+
+.root {
+	&.hasDarkBackground {
+		label {
+			color: variables.$white;
+		}
+	}
+
+	&.hasTwoColumns {
+		width: 50%;
+	}
+
+	label {
+		font-family: variables.$fontFamily;
+		text-align: left;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 1.5;
+		letter-spacing: 1.21px;
+	}
+
+	.label {
+		padding: 0.5rem 0;
+	}
+
+	.input {
+		font-size: 1rem;
+		display: inline-block;
+		color: variables.$white;
+		border: none;
+		outline: none;
+		background-color: black;
+		border-radius: variables.$inputBorderRadius;
+		min-height: 30px;
+		padding: 0.8125rem;
+		font-family: variables.$fontPayHeavy;
+		line-height: 1;
+
+		&.hasLeadingElement {
+			padding-left: 0.75rem;
+		}
+
+		&::placeholder {
+			color: variables.$pickledBluewood;
+			opacity: 0.5;
+			font-family: variables.$fontPayMedium;
+		}
+
+		&:focus {
+			~ .border {
+				border-color: variables.$inputHoverBorderColor;
+				box-shadow: variables.$inputFocusBackground;
+				outline: 0;
+			}
+		}
+		// Reset
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus,
+		&:-webkit-autofill:active {
+			/* stylelint-disable-next-line */
+			-webkit-box-shadow: 0 0 0 30px variables.$white inset !important;
+			/* stylelint-disable-next-line */
+			-webkit-text-fill-color: variables.$grey900 !important;
+		}
+
+		// Remove spinner icons
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button,
+		&::-webkit-calendar-picker-indicator {
+			-webkit-appearance: none;
+			background-image: none;
+			margin: 0;
+		}
+
+		-moz-appearance: textfield;
+
+		&:disabled {
+			background-color: variables.$grey100;
+			~ .border {
+				border: none;
+				pointer-events: auto;
+				cursor: not-allowed;
+			}
+			~ .trailingElement {
+				background-color: variables.$grey100;
+				pointer-events: none;
+			}
+		}
+
+		&:hover {
+			&:not(:focus) {
+				cursor: pointer;
+			}
+			&:disabled {
+				cursor: not-allowed;
+			}
+
+			~ .border {
+				// border-color: variables.$inputHoverBorderColor;
+				border: 2px solid variables.$inputHoverBorderColor;
+			}
+		}
+	}
+}
+
+.inputContainer {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.input {
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	min-width: 0;
+
+	&::placeholder {
+		font-family: variables.$fontFamily;
+		color: variables.$grey500;
+	}
+}
+
+.label {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	.action {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		color: variables.$grey500;
+	}
+}
+
+.optional {
+	color: variables.$pickledBluewood;
+}
+
+.leadingElement,
+.trailingElement {
+	padding: 0.8125rem 0.75rem;
+	background-color: variables.$inputElementsBackground;
+	color: variables.$grey700;
+	font-size: 1rem;
+	font-family: variables.$fontPayHeavy;
+	line-height: normal;
+}
+
+.leadingElement {
+	min-height: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+	border-right: 1px solid variables.$inputBorderColor;
+}
+
+.trailingElement {
+	min-height: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+	border-left: 1px solid variables.$inputBorderColor;
+}
+
+.sm {
+	//height: 15px;
+}
+
+.md {
+	//height: 30px;
+}
+
+.lg {
+	//height: 40px;
+}

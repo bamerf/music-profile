@@ -1,0 +1,90 @@
+@use "src/styles/variables";
+
+.disabled {
+  color: var(--grey-color-500, #{variables.$grey500});
+  cursor: not-allowed;
+}
+
+.root {
+  margin: .5rem 0;
+
+  --active: var(--primary-color, #{variables.$primary300});
+  --active-inner: var(--text-inverse-color, #{variables.$primary300});
+  --border: var(--grey-color-500, #{variables.$grey300});
+  --border-hover: var(--primary-color, #{variables.$primary300});
+  --background: var(--background-color, #{variables.$white});
+  --disabled: #f6f8ff;
+  --disabled-inner: #e1e6f9;
+
+  label {
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    margin: 3px;
+
+    &:not(.disabled) {
+      cursor: pointer;
+    }
+  }
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    width: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    border: 2px solid var(--bc, var(--border));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      transform: scale(0.55);
+      width: 21px;
+      height: 21px;
+      border: none;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      left: -2px;
+      top: -2px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --s: 0.5;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:disabled {
+      --b: var(--disabled);
+
+      cursor: not-allowed;
+      opacity: 0.8;
+
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+    }
+
+    &:hover:not(:checked):not(:disabled) {
+      --bc: var(--border-hover);
+    }
+  }
+}

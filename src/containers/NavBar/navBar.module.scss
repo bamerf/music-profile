@@ -1,0 +1,11 @@
+@use "../../styles/variables";
+
+.root {
+	h1 {
+		font-size: 44px;
+		font-family: variables.$fontPayHeavy;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: variables.$white;
+	}
+}

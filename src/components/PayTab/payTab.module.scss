@@ -1,0 +1,41 @@
+@import "../../../styles/variables";
+
+.tab {
+  font-family: var(--font-family, #{$fontFamily});
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: $grey300;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  transition: 200ms;
+  &:hover,
+  &:focus {
+    color: $grey500;
+    transition: 200ms;
+  }
+  &:focus {
+    outline: none;
+    transition: 200ms;
+  }
+}
+
+.tabActive {
+  color: $royalBlue;
+  border-bottom: 3px solid $royalBlue;
+  transition: 200ms;
+  &:hover,
+  &:focus {
+    color: $royalBlue;
+    transition: 200ms;
+  }
+  &:focus {
+    outline: none;
+    transition: 200ms;
+  }
+}
