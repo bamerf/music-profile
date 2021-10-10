@@ -8,31 +8,11 @@ $fontPayMedium: "PayMedium", Arial, "Helvetica Neue", Helvetica, sans-serif !def
 $fontPayHeavy: "PayHeavy", Arial, "Helvetica Neue", Helvetica, sans-serif !default;
 
 // Brand colours
-$trustBlue: #1e236e !default;
-$violetEggplant: #941f81 !default;
 $radicalRed: #ff2868 !default; // not from our app
-$springGreen: #00e686 !default; // not from our app
 
 // UI/UX Colours
 // find pay variables from our UX/UI designs
-$jacksonsPurple: #262b8c !default; // not from our app
-$royalBlue: #3138b4 !default; // not from our app
-$dodgerBlue: #40a9ff !default;
-$evergladeGreen: #1d3f31 !default;
-$sherwoodGreen: #006a3e !default;
-$icebergGreen: #e5f7f0 !default;
-$jadeGreen: #00b368 !default;
-$mildGreen: #21a179 !default;
-$jungleGreen: #28bd8a !default;
-$vistaBlue: #77d1a4 !default;
-$hawaiianTan: #9d5614 !default;
-$fuelYellow: #f0a92e !default;
-$albescentWhite: #fff4e5 !default;
-$brightRed: #a70000 !default;
-$wispPink: #fce6e6 !default;
-$pastelRed: #d03443 !default;
 $carnation: #f25468 !default;
-$jellyBean: #276ba6 !default;
 $pickledBluewood: #283e48 !default;
 $laPalma: #429e15 !default;
 $soundcloudOrange: hsl(10, 99%, 49%) !default;
@@ -89,20 +69,6 @@ $shadowLg: 0 12px 17px rgba(0, 0, 0, 0.06), 0 5px 22px rgba(0, 0, 0, 0.06),
 	0 7px 8px rgba(0, 0, 0, 0.08) !default;
 $shadowXl: 0 24px 38px rgba(0, 0, 0, 0.08), 0 9px 46px rgba(0, 0, 0, 0.08),
 	0 11px 15px rgba(0, 0, 0, 0.14) !default;
-
-// Gradients
-$hero-gradient: linear-gradient(222deg, #3068cb 0%, #2b3d7d 100%);
-$dark-gradient: linear-gradient(268deg, #002140 1%, #1b3666 100%);
-$light-grey-bg: linear-gradient(
-	204.96deg,
-	#f2f4ff 0%,
-	rgba(242, 244, 255, 0.45) 100%
-);
-$second-light-grey-bg: linear-gradient(
-	198.6deg,
-	rgba(234, 237, 250, 0.63) 0%,
-	#e3e8ff 100%
-);
 
 // Inputs
 $inputElementsBackground: $grey50;
