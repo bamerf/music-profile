@@ -20,8 +20,6 @@ export const useForm = (submitCallback: () => void): TUseForm => {
 
 	const handleChange = (event: HandleChangeEvent) => {
 		event.persist();
-		// console.log(event.target.value);
-		console.log(event.target.name);
 		setState((currentState) => ({
 			...currentState,
 			[event.target.name]: event.target.value,
